@@ -21,3 +21,16 @@
 .router-link-active.nav-link {
     color: $primary;
 }
+
+.head-block {
+    background-image: url('@/assets/varsity-2022-header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 45% 50%;
+    height: 600px;
+
+    .head-inner {
+        background-color: rgba(10, 10, 10, 0.5);
+        color: #ffffff;
+    }
+}

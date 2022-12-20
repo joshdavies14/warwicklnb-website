@@ -4,7 +4,7 @@ import router from "./router";
 
 import "./assets/main.scss";
 
-import * as bootstrap from 'bootstrap';
+import * as bootstrap from "bootstrap";
 
 const app = createApp(App);
 
