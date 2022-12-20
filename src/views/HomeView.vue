@@ -2,19 +2,19 @@
 
 <template>
   <main>
-    <div class="head-block">
+    <div class="head-block-home">
       <section
         class="head-inner align-middle h-100 d-flex align-items-center justify-content-center"
       >
-        <h1 class="display-2 fw-bold">Warwick Latin & Ballroom</h1>
+        <h1 class="display-5 fw-bold">Warwick Latin & Ballroom</h1>
       </section>
     </div>
 
     <div class="container h-100 px-5 pt-5">
-      <h2 class="d-flex align-items-center justify-content-center pb-3">Welcome!</h2>
-      <p
-        class="d-flex align-items-center justify-content-center text-center"
-      >
+      <h2 class="d-flex align-items-center justify-content-center pb-3">
+        Welcome!
+      </h2>
+      <p class="d-flex align-items-center justify-content-center text-center">
         Warwick University Dancesport is dedicated to providing students, of all
         abilities, the opportunities to dance Latin and Ballroom in a fun and
         friendly environment!
@@ -42,7 +42,9 @@
               <p class="card-text">
                 Want to take your dancing to another level?
               </p>
-              <a href="/private-lessons" class="btn btn-primary">Go somewhere</a>
+              <a href="/private-lessons" class="btn btn-primary"
+                >Go somewhere</a
+              >
             </div>
           </div>
         </div>
@@ -75,7 +77,9 @@
               <p class="card-text">
                 We offer facilities that are available for more practice
               </p>
-              <a href="/practice-spaces" class="btn btn-primary">Go somewhere</a>
+              <a href="/practice-spaces" class="btn btn-primary"
+                >Go somewhere</a
+              >
             </div>
           </div>
         </div>
