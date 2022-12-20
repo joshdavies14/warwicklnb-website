@@ -1,1 +1,32 @@
+$primary: #8662C7;
+$secondary: #A081D9;
+$info: #38BEC9;
+$success: #31B237;
+$black: #27241D;
+$dark: #27241D;
+$grey: #A39E93;
+$light-grey: #E8E6E1;
+$alt-grey: #DEE2E6;
+$white: #FBFCFF;
+
 @import "~bootstrap/scss/bootstrap";
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+html,
+body {
+    font-family: 'Source Sans 3', sans-serif;
+    height: 100%;
+    height: -webkit-fill-available;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    max-height: 100vh;
+    background: #FAf9F7;
+    color: $dark;
+}
+
+.main-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1.5rem;
+}
