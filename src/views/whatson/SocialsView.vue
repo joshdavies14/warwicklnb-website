@@ -1,15 +1,7 @@
 <template>
     <div class="head-block">
         <section
-            class="
-                head-inner
-                align-middle
-                h-100
-                d-flex
-                align-items-center
-                justify-content-center
-                py-4
-            "
+            class="head-inner align-middle h-100 d-flex align-items-center justify-content-center py-4"
         >
             <h1 class="display-5 fw-bold">socials</h1>
         </section>
@@ -31,19 +23,39 @@
         >
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="@/assets/images/socials/christmas-meal-2223.jpg" class="d-block w-100" alt="Christmas Meal 22/23" />
+                    <img
+                        src="@/assets/images/socials/christmas-meal-2223.jpg"
+                        class="d-block w-100"
+                        alt="Christmas Meal 22/23"
+                    />
                 </div>
                 <div class="carousel-item">
-                    <img src="@/assets/images/socials/circle-2122.jpg" class="d-block w-100" alt="Circle 21/22" />
+                    <img
+                        src="@/assets/images/socials/circle-2122.jpg"
+                        class="d-block w-100"
+                        alt="Circle 21/22"
+                    />
                 </div>
                 <div class="carousel-item">
-                    <img src="@/assets/images/socials/skool-dayz-2122.jpg" class="d-block w-100" alt="Skool Dayz 21/22" />
+                    <img
+                        src="@/assets/images/socials/skool-dayz-2122.jpg"
+                        class="d-block w-100"
+                        alt="Skool Dayz 21/22"
+                    />
                 </div>
                 <div class="carousel-item">
-                    <img src="@/assets/images/socials/christmas-meal-2122.jpg" class="d-block w-100" alt="Christmas Meal 21/22" />
+                    <img
+                        src="@/assets/images/socials/christmas-meal-2122.jpg"
+                        class="d-block w-100"
+                        alt="Christmas Meal 21/22"
+                    />
                 </div>
                 <div class="carousel-item">
-                    <img src="@/assets/images/socials/adoptions-2122.jpg" class="d-block w-100" alt="Adoptions 21/22" />
+                    <img
+                        src="@/assets/images/socials/adoptions-2122.jpg"
+                        class="d-block w-100"
+                        alt="Adoptions 21/22"
+                    />
                 </div>
             </div>
             <button

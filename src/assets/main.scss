@@ -11,8 +11,12 @@
     border-bottom: 3px solid transparent;
 }
 
-.nav-item .router-link-active {
+.nav-item .router-link-active :not(.dropdown-item) {
     border-bottom: 3px solid $primary;
+}
+
+.nav-item .dropdown-item.router-link-active {
+    color: $primary;
 }
 
 .nav-link {

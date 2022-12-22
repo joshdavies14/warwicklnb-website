@@ -26,7 +26,7 @@ const router = createRouter({
             path: "/socials",
             name: "socials",
             component: SocialsView,
-        }
+        },
     ],
 });
 
