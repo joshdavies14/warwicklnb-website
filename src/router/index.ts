@@ -4,6 +4,8 @@ import AboutView from "../views/AboutView.vue";
 import CalendarView from "../views/CalendarView.vue";
 import SocialsView from "../views/whatson/SocialsView.vue";
 
+import ClassesView from "../views/dance/ClassesView.vue";
+
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
@@ -26,6 +28,11 @@ const router = createRouter({
             path: "/socials",
             name: "socials",
             component: SocialsView,
+        },
+        {
+            path: "/classes",
+            name: "classes",
+            component: ClassesView,
         },
     ],
 });
