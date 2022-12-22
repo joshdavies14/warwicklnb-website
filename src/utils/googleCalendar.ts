@@ -8,8 +8,11 @@ function loadCalendarAPI() {
         script.src = "https://apis.google.com/js/api.js";
         document.body.appendChild(script);
         script.onload = () => {
+            // @ts-ignore: Cannot find name 'gapi'.
             gapi.load("client", () => {
+                // @ts-ignore: Cannot find name 'gapi'.
                 gapi.client.init({ apiKey: apiKey }).then(() => {
+                    // @ts-ignore: Cannot find name 'gapi'.
                     gapi.client
                         .load(
                             "https://content.googleapis.com/discovery/v1/apis/calendar/v3/rest"
@@ -19,7 +22,7 @@ function loadCalendarAPI() {
                                 resolve(
                                     "GAPI client successfully loaded for API"
                                 ),
-                            (err) => reject(err)
+                            (err: any) => reject(err)
                         );
                 });
             });
@@ -33,6 +36,7 @@ function loadCalendarAPI() {
  */
 function getEventsList(maxResults = 1000) {
     const calendarId = import.meta.env.VITE_CALENDAR_ID;
+    // @ts-ignore: Cannot find name 'gapi'.
     return gapi.client.calendar.events.list({
         calendarId: calendarId,
         maxResults: maxResults,
@@ -61,7 +65,7 @@ export async function getEventsForCalendar() {
     }
     try {
         events = await getEventsList();
-        events.result.items.forEach((event) => {
+        events.result.items.forEach((event: any) => {
             if (event.status !== "cancelled") {
                 const calendarEvent: CalendarEvent = {
                     id: event.id,

@@ -15,7 +15,6 @@
             :item-top="themeOptions.top"
             :item-content-height="themeOptions.height"
             :item-border-height="themeOptions.border"
-            :current-period-label="themeOptions.currentPeriodLabel"
             class="calendar-lnb"
         >
             <template #header="{ headerProps }">
@@ -45,7 +44,7 @@ export default defineComponent({
     },
     data() {
         return {
-            events: {},
+            events: [],
             isLoading: true,
             showDate: new Date(),
             themeOptions: {
@@ -74,7 +73,7 @@ export default defineComponent({
     },
     methods: {
         async getEvents() {
-            let events = {};
+            let events = <any>[];
             try {
                 events = await getEventsForCalendar();
             } catch (err) {
@@ -82,7 +81,7 @@ export default defineComponent({
             }
             this.events = events;
         },
-        setShowDate(d) {
+        setShowDate(d: any) {
             this.showDate = d;
         },
     },

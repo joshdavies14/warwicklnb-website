@@ -52,7 +52,7 @@
 </template>
 
 <script lang="ts">
-import { IHeaderProps } from "../utils/iHeaderProps";
+import type { IHeaderProps } from "../utils/iHeaderProps";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -65,15 +65,12 @@ export default defineComponent({
     },
     data() {
         return {
-            previousYearLabel: "",
             previousMonthLabel:
                 '<font-awesome-icon icon="fa-solid fa-chevron-left" />',
-            nextMonthLabel: "",
-            nextYearLabel: "",
         };
     },
     methods: {
-        onInput(d: Date): void {
+        onInput(d: Date | null): void {
             this.$emit("input", d);
         },
     },
@@ -82,6 +79,6 @@ export default defineComponent({
 
 <script setup lang="ts">
 const emit = defineEmits<{
-    (e: "input", day: Date): void;
+    (e: "input", day: Date | null): void;
 }>();
 </script>
