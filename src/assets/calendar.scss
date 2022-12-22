@@ -1,0 +1,170 @@
+/*
+**************************************************************
+This theme is a loose approximation of Google Calendar's UI,
+as of May 2020.
+**************************************************************
+*/
+
+/* Header */
+
+.calendar-lnb {
+	font-size: 12px;
+	font-weight: 400;
+	border-color: rgb(32 33 36);
+}
+
+.calendar-lnb .cv-header {
+	padding: 0.6em;
+}
+
+.calendar-lnb .periodLabel {
+	font-size: 1.85em;
+	color: #3c4043;
+	margin-left: 0;
+}
+
+.calendar-lnb .cv-header-nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.calendar-lnb .cv-header button:not(.currentPeriod) {
+	background-color: transparent;
+	border: none;
+	border-radius: 99em;
+	font-size: 2em;
+	color: #5f6368;
+}
+
+.calendar-lnb .cv-header button:hover {
+	background-color: rgba(32, 33, 36, 3.9%);
+}
+
+.calendar-lnb .cv-header button.currentPeriod {
+	order: -1;
+	padding: 0.6em 0.75em;
+	margin-right: 1em;
+	font-size: 1.2em;
+	border-radius: 0.25em;
+}
+
+.calendar-lnb .cv-header button.previousYear,
+.calendar-lnb .cv-header button.previousPeriod,
+.calendar-lnb .cv-header button.nextPeriod,
+.calendar-lnb .cv-header button.nextYear {
+	width: 2.1em;
+	height: 1.5em;
+	padding: 0;
+	text-align: center;
+	letter-spacing: -0.6em;
+	padding-right: 0.6em;
+}
+
+.calendar-lnb .cv-header button:disabled {
+	color: #ccc;
+}
+
+.calendar-lnb .cv-header-day {
+	border-bottom: none;
+	text-transform: uppercase;
+	padding: 0.75em 0 0.25em;
+	color: #70757a;
+}
+
+.calendar-lnb .cv-week.week1 .cv-day {
+	border-top: none;
+}
+
+/* Grid */
+
+.calendar-lnb .cv-day-number {
+	display: flex;
+	border-radius: 99rem;
+	height: 2em;
+	width: auto;
+	min-width: 2em;
+	justify-content: center;
+	margin: 0 auto;
+	padding: 0.5em 0.4em;
+	color: #3c4043;
+}
+
+.calendar-lnb .cv-day.outsideOfMonth .cv-day-number {
+	color: #70757a;
+}
+
+.calendar-lnb .cv-day.today .cv-day-number {
+	margin-top: 0.25rem;
+	background-color: $primary;
+	color: #fff;
+}
+
+.calendar-lnb .cv-day[aria-selected="true"] {
+	background-color: #ffc;
+}
+
+/* Events */
+
+.calendar-lnb .cv-item {
+	border-color: transparent;
+	border-radius: 0.25em;
+	background-color: $primary;
+	color: white;
+	padding-top: 0.325em;
+	padding-bottom: 0.325em;
+	padding-left: 0.6em;
+}
+
+/* Override metrics to leave space at the end of each item */
+
+.calendar-lnb .cv-item.span1 {
+	width: calc((100% / 7) - 0.75em);
+}
+
+.calendar-lnb .cv-item.span2 {
+	width: calc((200% / 7) - 0.75em);
+}
+
+.calendar-lnb .cv-item.span3 {
+	width: calc((300% / 7) - 0.75em);
+}
+
+.calendar-lnb .cv-item.span4 {
+	width: calc((400% / 7) - 0.75em);
+}
+
+.calendar-lnb .cv-item.span5 {
+	width: calc((500% / 7) - 0.75em);
+}
+
+.calendar-lnb .cv-item.span6 {
+	width: calc((600% / 7) - 0.75em);
+}
+
+.calendar-lnb .cv-item.span7 {
+	width: calc((700% / 7) - 0.75em);
+}
+
+.calendar-lnb .cv-item.isHovered {
+	filter: brightness(95%);
+}
+
+.calendar-lnb .cv-item.continued {
+	border-left-style: none;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+/* Event Times */
+
+.calendar-lnb .cv-item .startTime,
+.calendar-lnb .cv-item .endTime {
+	font-weight: bold;
+}
+
+/* Drag and drop */
+
+.calendar-lnb .cv-day.draghover {
+	box-shadow: inset 0 0 0.2em 0.2em yellow;
+}
