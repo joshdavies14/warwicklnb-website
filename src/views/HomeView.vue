@@ -6,13 +6,13 @@
             <section
                 class="head-inner align-middle h-100 d-flex align-items-center justify-content-center"
             >
-                <h1 class="display-5 fw-bold">Warwick Latin & Ballroom</h1>
+                <h1 class="display-2 fw-bold">warwick latin & ballroom</h1>
             </section>
         </div>
 
         <div class="container h-100 px-5 pt-5">
             <h2 class="d-flex align-items-center justify-content-center pb-3">
-                Welcome!
+                hello! 👋
             </h2>
             <p
                 class="d-flex align-items-center justify-content-center text-center"
@@ -25,7 +25,7 @@
 
         <section class="container px-5 pt-5">
             <h2 class="d-flex align-items-center justify-content-center pb-3">
-                What's on
+                what we do
             </h2>
             <div class="row">
                 <div class="col">

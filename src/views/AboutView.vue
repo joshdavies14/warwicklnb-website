@@ -3,13 +3,13 @@
         <section
             class="head-inner align-middle h-100 d-flex align-items-center justify-content-center py-4"
         >
-            <h1 class="display-2 fw-bold">About Us</h1>
+            <h1 class="display-5 fw-bold">about us</h1>
         </section>
     </div>
 
     <div class="container h-100 px-5 pt-5">
         <h2 class="d-flex align-items-center justify-content-center pb-3">
-            Our Mission
+            our mission
         </h2>
         <p class="d-flex align-items-center justify-content-center text-center">
             Warwick Latin and Ballroom Dancesport are dedicated to providing

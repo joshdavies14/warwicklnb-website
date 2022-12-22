@@ -1,4 +1,12 @@
 <template>
+<div class="head-block">
+        <section
+            class="head-inner align-middle h-100 d-flex align-items-center justify-content-center py-4"
+        >
+            <h1 class="display-5 fw-bold">what's on</h1>
+        </section>
+    </div>
+
     <div
         v-if="!isLoading"
         class="container align-items-center justify-content-center pt-4"
