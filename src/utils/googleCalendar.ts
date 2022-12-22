@@ -72,7 +72,7 @@ export async function getEventsForCalendar() {
                     startDate: new Date(event.start.dateTime),
                     endDate: new Date(event.end.dateTime),
                     title: event.summary,
-                    tooltip: event.description,
+                    tooltip: event.summary + (event.description ? ' - ' + event.description : ''),
                     url: event.htmlLink,
                     classes: [],
                     style: "",
