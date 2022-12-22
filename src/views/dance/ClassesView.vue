@@ -204,5 +204,49 @@
                 </div>
             </div>
         </div>
+
+        <h3 class="text-center pt-5">pricing</h3>
+
+        <p class="pt-3">
+            There are two ways to pay for our classes: pay as you go and pay for
+            a term up front with a class pass. The first two weeks of each term
+            are free for everyone, then from week 3 onwards you need to pay each
+            week, unless you have a class pass then you get two additional weeks
+            free. If you pay as you go, you can either pay in cash or via bank
+            transfer to our treasurer.
+        </p>
+
+        <div class="card-group pt-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">beginner</h5>
+                    <p class="card-text">
+                        <strong>£2.50</strong> - member <br />
+                        <strong>£3.50</strong> - non-member <br />
+                        <strong>£15</strong> - class pass
+                    </p>
+                </div>
+            </div>
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">novice</h5>
+                    <p class="card-text">
+                        <strong>£3</strong> - member <br />
+                        <strong>£4</strong> - non-member <br />
+                        <strong>£18</strong> - class pass
+                    </p>
+                </div>
+            </div>
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">inter/adv</h5>
+                    <p class="card-text">
+                        <strong>£4</strong> - member <br />
+                        <strong>£5</strong> - non-member <br />
+                        <strong>£24</strong> - class pass
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
