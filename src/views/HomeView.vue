@@ -51,7 +51,7 @@
                 what we do
             </h2>
             <div class="row">
-                <div class="col">
+                <div class="col mb-4">
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">classes</h5>
@@ -64,7 +64,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col mb-4">
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">private lessons</h5>
@@ -77,7 +77,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col mb-4">
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">competitions</h5>
@@ -90,7 +90,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col mb-4">
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">socials</h5>
@@ -104,7 +104,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col mb-4">
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">practice space</h5>

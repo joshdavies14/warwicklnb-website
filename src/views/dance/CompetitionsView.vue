@@ -612,7 +612,7 @@
             </em>
         </p>
 
-        <div class="row row-cols-4 pt-3 g-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 pt-3 g-4">
             <div class="col">
                 <div class="card text-center">
                     <div class="card-body">
