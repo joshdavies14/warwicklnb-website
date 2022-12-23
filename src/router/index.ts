@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import CalendarView from "../views/CalendarView.vue";
+import BlogView from "../views/BlogView.vue";
+import BlogPostView from "../views/BlogPostView.vue";
 import SocialsView from "../views/whatson/SocialsView.vue";
 
 import ClassesView from "../views/dance/ClassesView.vue";
@@ -19,6 +21,16 @@ const router = createRouter({
             path: "/about",
             name: "about",
             component: AboutView,
+        },
+        {
+            path: "/blog",
+            name: "blog",
+            component: BlogView,
+        },
+        {
+            path: "/blog/:slug",
+            name: "blog-post",
+            component: BlogPostView,
         },
         {
             path: "/calendar",

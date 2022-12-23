@@ -17,7 +17,7 @@
                     </li>
                     <li class="nav-item align-middle dropdown">
                         <RouterLink
-                            to="/calendar"
+                            to="/whats-on"
                             class="nav-link dropdown-toggle align-middle px-3"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
@@ -96,9 +96,9 @@
                     </li>
                     <li class="nav-item align-middle">
                         <RouterLink
-                            to="/documents"
+                            to="/blog"
                             class="nav-link align-middle px-3"
-                            >Documents</RouterLink
+                            >Blog</RouterLink
                         >
                     </li>
                     <li class="nav-item align-middle">

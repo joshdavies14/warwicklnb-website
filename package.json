@@ -14,6 +14,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@contentful/rich-text-types": "^16.0.2",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
     "@fortawesome/free-regular-svg-icons": "^6.2.1",
@@ -22,7 +23,11 @@
     "@popperjs/core": "^2.11.6",
     "@sentry/tracing": "^7.28.0",
     "@sentry/vue": "^7.28.0",
+    "@types/escape-html": "^1.0.2",
     "bootstrap": "^5.2.3",
+    "contentful": "^9.2.14",
+    "escape-html": "^1.0.3",
+    "luxon": "^3.1.1",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6",
     "vue-simple-calendar": "^6.2.1"
@@ -31,6 +36,7 @@
     "@rushstack/eslint-patch": "^1.1.4",
     "@types/bootstrap": "^5.2.6",
     "@types/jsdom": "^20.0.1",
+    "@types/luxon": "^3.1.0",
     "@types/node": "^18.11.12",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",

@@ -15,6 +15,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
     faChevronLeft,
     faChevronRight,
+    faDownload,
 } from "@fortawesome/free-solid-svg-icons";
 import {
     faInstagram,
@@ -34,7 +35,8 @@ library.add(
     faYoutube,
     faTiktok,
     faChevronLeft,
-    faChevronRight
+    faChevronRight,
+    faDownload,
 );
 
 const app = createApp(App);
