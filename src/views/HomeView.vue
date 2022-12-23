@@ -4,7 +4,14 @@
     <main>
         <div class="head-block-home">
             <section
-                class="head-inner align-middle h-100 d-flex align-items-center justify-content-center"
+                class="
+                    head-inner
+                    align-middle
+                    h-100
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                "
             >
                 <h1 class="display-2 fw-bold">warwick latin & ballroom</h1>
             </section>
@@ -15,12 +22,28 @@
                 hello! 👋
             </h2>
             <p
-                class="d-flex align-items-center justify-content-center text-center"
+                class="
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    text-center
+                "
             >
                 Warwick University Dancesport is dedicated to providing
                 students, of all abilities, the opportunities to dance Latin and
                 Ballroom in a fun and friendly environment!
             </p>
+            <div class="d-flex align-items-center justify-content-center">
+                <iframe
+                    width="800"
+                    height="450"
+                    src="https://www.youtube-nocookie.com/embed/KRx9te1Lm4c"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </div>
         </div>
 
         <section class="container px-5 pt-5">
