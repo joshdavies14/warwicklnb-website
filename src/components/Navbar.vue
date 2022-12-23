@@ -57,7 +57,7 @@
                     </li>
                     <li class="nav-item align-middle dropdown">
                         <RouterLink
-                            to="/calendar"
+                            to="/get-involved"
                             class="nav-link dropdown-toggle align-middle px-3"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"

@@ -5,6 +5,7 @@ import CalendarView from "../views/CalendarView.vue";
 import SocialsView from "../views/whatson/SocialsView.vue";
 
 import ClassesView from "../views/dance/ClassesView.vue";
+import CompetitionsView from "../views/dance/CompetitionsView.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +34,11 @@ const router = createRouter({
             path: "/classes",
             name: "classes",
             component: ClassesView,
+        },
+        {
+            path: "/competitions",
+            name: "competitions",
+            component: CompetitionsView,
         },
     ],
 });
