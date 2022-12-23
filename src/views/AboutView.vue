@@ -34,4 +34,10 @@
             our skill, charity and personality.
         </p>
     </div>
+
+    <Fundraising />
 </template>
+
+<script setup lang="ts">
+import Fundraising from "./about/Fundraising.vue";
+</script>
