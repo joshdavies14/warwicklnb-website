@@ -36,8 +36,11 @@
     </div>
 
     <Fundraising />
+
+    <Committee />
 </template>
 
 <script setup lang="ts">
 import Fundraising from "./about/Fundraising.vue";
+import Committee from "./about/Committee.vue";
 </script>
