@@ -58,8 +58,11 @@ export default defineComponent({
     },
     mounted() {
         const client = contentful.createClient({
+            // @ts-ignore
             space: import.meta.env.VITE_CONTENTFUL_SPACE_ID,
+            // @ts-ignore
             environment: import.meta.env.VITE_CONTENTFUL_ENVIRONMENT_ID,
+            // @ts-ignore
             accessToken: import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN,
         });
         client
@@ -67,6 +70,7 @@ export default defineComponent({
                 content_type: "blog",
                 include: 2,
             })
+            // @ts-ignore
             .then((response) => (this.posts = response.items))
             .catch(console.error);
     },

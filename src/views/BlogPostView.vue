@@ -49,8 +49,10 @@ export default defineComponent({
         post() {
             if (this.post !== null) {
                 this.postContent = documentToHtmlString({
+                    // @ts-ignore
                     nodeType: "document",
                     content: JSON.parse(
+                        // @ts-ignore
                         JSON.stringify(this.post.fields.content.content)
                     ),
                 });
@@ -60,8 +62,11 @@ export default defineComponent({
     },
     mounted() {
         const client = contentful.createClient({
+            // @ts-ignore
             space: import.meta.env.VITE_CONTENTFUL_SPACE_ID,
+            // @ts-ignore
             environment: import.meta.env.VITE_CONTENTFUL_ENVIRONMENT_ID,
+            // @ts-ignore
             accessToken: import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN,
         });
         client
@@ -71,6 +76,7 @@ export default defineComponent({
                 limit: 1,
                 "fields.slug": this.$route.params.slug,
             })
+            // @ts-ignore
             .then((response) => (this.post = response.items[0]))
             .catch(console.error);
     },

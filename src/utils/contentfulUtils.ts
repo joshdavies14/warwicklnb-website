@@ -5,15 +5,18 @@
 
 import escape from 'escape-html';
 import {
-  Document,
-  Mark,
-  Text,
   BLOCKS,
   MARKS,
   INLINES,
-  Block,
-  Inline,
   helpers,
+} from '@contentful/rich-text-types';
+
+import type {
+    Document,
+    Mark,
+    Text,
+    Block,
+    Inline,
 } from '@contentful/rich-text-types';
 
 const attributeValue = (value: string) => `"${value.replace(/"/g, '&quot;')}"`;
@@ -125,9 +128,11 @@ function nodeToHtmlString(node: CommonNode, { renderNode, renderMark }: Options)
     const nodeValue = escape(node.value);
     if (node.marks.length > 0) {
       return node.marks.reduce((value: string, mark: Mark) => {
+        // @ts-ignore
         if (!renderMark[mark.type]) {
           return value;
         }
+        // @ts-ignore
         return renderMark[mark.type](value);
       }, nodeValue);
     }
@@ -135,11 +140,13 @@ function nodeToHtmlString(node: CommonNode, { renderNode, renderMark }: Options)
     return nodeValue;
   } else {
     const nextNode: Next = (nodes) => nodeListToHtmlString(nodes, { renderMark, renderNode });
+    // @ts-ignore
     if (!node.nodeType || !renderNode[node.nodeType]) {
       // TODO: Figure what to return when passed an unrecognized node.
       console.log(node);
       return '';
     }
+    // @ts-ignore
     return renderNode[node.nodeType](node, nextNode);
   }
 }
