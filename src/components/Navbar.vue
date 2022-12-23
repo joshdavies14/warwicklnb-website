@@ -55,12 +55,37 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item align-middle">
+                    <li class="nav-item align-middle dropdown">
                         <RouterLink
-                            to="/get-involved"
-                            class="nav-link align-middle px-3"
-                            >Let's Dance</RouterLink
+                            to="/calendar"
+                            class="nav-link dropdown-toggle align-middle px-3"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            data-bs-reference="parent"
                         >
+                            Let's Dance
+                        </RouterLink>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <RouterLink
+                                    to="/classes"
+                                    class="dropdown-item"
+                                >
+                                    Classes
+                                </RouterLink>
+                            </li>
+                            <li>
+                                <RouterLink to="/competitions" class="dropdown-item">
+                                    Competitions
+                                </RouterLink>
+                            </li>
+                            <li>
+                                <RouterLink to="/private-lessons" class="dropdown-item">
+                                    Private Lessons
+                                </RouterLink>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item align-middle">
                         <RouterLink

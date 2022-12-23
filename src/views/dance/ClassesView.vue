@@ -19,7 +19,7 @@
         <p>
             We welcome people of all dance abilities, from complete beginners to
             those who have danced for years. Per week, we run three classes
-            consisting of Beginner, Novice and Intermediate/Advanced. 
+            consisting of Beginner, Novice and Intermediate/Advanced.
         </p>
         <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
