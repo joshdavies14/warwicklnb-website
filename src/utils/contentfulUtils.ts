@@ -33,7 +33,17 @@ const defaultNodeRenderers: RenderNode = {
   [BLOCKS.HEADING_6]: (node, next) => `<h6>${next(node.content)}</h6>`,
   [BLOCKS.EMBEDDED_ENTRY]: (node, next) => `<div>${next(node.content)}</div>`,
   [BLOCKS.EMBEDDED_ASSET]: (node, next) => {
-    // return different if an image
+    // return img object if an image
+    if (node.data.target.fields.file.contentType.includes('image/')) {
+        const src = typeof node.data.target.fields.file.url === 'string' ? node.data.target.fields.file.url : '';
+        const alt = typeof node.data.target.fields.title === 'string' ? node.data.target.fields.title : '';
+        return `<img src=${attributeValue(src)} alt=${attributeValue(alt)} />`;
+    }
+    // embed PDF in page
+    if (node.data.target.fields.file.contentType.includes('application/pdf')) {
+        const src = typeof node.data.target.fields.file.url === 'string' ? node.data.target.fields.file.url : '';
+        return `<iframe src=${attributeValue(src)} width="100%" height="500px"></iframe><a href=${attributeValue(src)}>${node.data.target.fields.title} ${downloadIcon}</a>`;
+    }
     const href = typeof node.data.target.fields.file.url === 'string' ? node.data.target.fields.file.url : '';
     return `<a href=${attributeValue(href)}>${node.data.target.fields.title} ${downloadIcon}</a>`;
   },
@@ -42,7 +52,7 @@ const defaultNodeRenderers: RenderNode = {
   [BLOCKS.LIST_ITEM]: (node, next) => `<li>${next(node.content)}</li>`,
   [BLOCKS.QUOTE]: (node, next) => `<blockquote>${next(node.content)}</blockquote>`,
   [BLOCKS.HR]: () => '<hr/>',
-  [BLOCKS.TABLE]: (node, next) => `<table>${next(node.content)}</table>`,
+  [BLOCKS.TABLE]: (node, next) => `<table class="table">${next(node.content)}</table>`,
   [BLOCKS.TABLE_ROW]: (node, next) => `<tr>${next(node.content)}</tr>`,
   [BLOCKS.TABLE_HEADER_CELL]: (node, next) => `<th>${next(node.content)}</th>`,
   [BLOCKS.TABLE_CELL]: (node, next) => `<td>${next(node.content)}</td>`,
@@ -142,8 +152,6 @@ function nodeToHtmlString(node: CommonNode, { renderNode, renderMark }: Options)
     const nextNode: Next = (nodes) => nodeListToHtmlString(nodes, { renderMark, renderNode });
     // @ts-ignore
     if (!node.nodeType || !renderNode[node.nodeType]) {
-      // TODO: Figure what to return when passed an unrecognized node.
-      console.log(node);
       return '';
     }
     // @ts-ignore
