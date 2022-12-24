@@ -1,13 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import AboutView from "../views/AboutView.vue";
-import CalendarView from "../views/CalendarView.vue";
-import BlogView from "../views/BlogView.vue";
-import BlogPostView from "../views/BlogPostView.vue";
-import SocialsView from "../views/whatson/SocialsView.vue";
-
-import ClassesView from "../views/dance/ClassesView.vue";
-import CompetitionsView from "../views/dance/CompetitionsView.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,37 +12,37 @@ const router = createRouter({
         {
             path: "/about",
             name: "about",
-            component: AboutView,
+            component: () => import("../views/AboutView.vue"),
         },
         {
             path: "/blog",
             name: "blog",
-            component: BlogView,
+            component: () => import("../views/BlogView.vue"),
         },
         {
             path: "/blog/:slug",
             name: "blog-post",
-            component: BlogPostView,
+            component: () => import("../views/BlogPostView.vue"),
         },
         {
             path: "/calendar",
             name: "calendar",
-            component: CalendarView,
+            component: () => import("../views/CalendarView.vue"),
         },
         {
             path: "/socials",
             name: "socials",
-            component: SocialsView,
+            component: () => import("../views/whatson/SocialsView.vue"),
         },
         {
             path: "/classes",
             name: "classes",
-            component: ClassesView,
+            component: () => import("../views/dance/ClassesView.vue"),
         },
         {
             path: "/competitions",
             name: "competitions",
-            component: CompetitionsView,
+            component: () => import("../views/dance/CompetitionsView.vue"),
         },
     ],
 });
