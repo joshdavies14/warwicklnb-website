@@ -8,13 +8,13 @@
             <div class="col col-md-3">
                 <div class="committee-image">
                     <img
-                        src="@/assets/images/committee/2223/hannah-president.jpg"
-                        alt="Hannah, President"
+                        :src="getExec('president').fields.image.fields.file.url"
+                        :alt="getExec('president').fields.image.fields.title"
                     />
                     <p class="text-center pt-2">
-                        <strong>Hannah Stäger</strong>
+                        <strong>{{ getExec('president').fields.name }}</strong>
                         <br />
-                        President
+                        {{ getExec('president').fields.position }}
                     </p>
                 </div>
             </div>
@@ -25,108 +25,52 @@
             <div class="col col-md-3">
                 <div class="committee-image">
                     <img
-                        src="@/assets/images/committee/2223/lizz-vicepresident.jpg"
-                        alt="Hannah, President"
+                        :src="getExec('vicepresident').fields.image.fields.file.url"
+                        :alt="getExec('vicepresident').fields.image.fields.title"
                     />
                     <p class="text-center pt-2">
-                        <strong>Elizabeth Hayes</strong>
+                        <strong>{{ getExec('vicepresident').fields.name }}</strong>
                         <br />
-                        Vice-President & Welfare
+                        {{ getExec('vicepresident').fields.position }}
                     </p>
                 </div>
             </div>
             <div class="col col-md-3">
                 <div class="committee-image">
                     <img
-                        src="@/assets/images/committee/2223/ashvini-treasurer.jpg"
-                        alt="Hannah, President"
+                        :src="getExec('treasurer').fields.image.fields.file.url"
+                        :alt="getExec('treasurer').fields.image.fields.title"
                     />
                     <p class="text-center pt-2">
-                        <strong>Ashvini Wijayapala</strong>
+                        <strong>{{ getExec('treasurer').fields.name }}</strong>
                         <br />
-                        Treasurer
+                        {{ getExec('treasurer').fields.position }}
                     </p>
                 </div>
             </div>
             <div class="col col-md-3">
                 <div class="committee-image">
                     <img
-                        src="@/assets/images/committee/2223/lottie-secretary.jpg"
-                        alt="Hannah, President"
+                        :src="getExec('secretary').fields.image.fields.file.url"
+                        :alt="getExec('secretary').fields.image.fields.title"
                     />
                     <p class="text-center pt-2">
-                        <strong>Lottie Cooke</strong>
+                        <strong>{{ getExec('secretary').fields.name }}</strong>
                         <br />
-                        Secretary
+                        {{ getExec('secretary').fields.position }}
                     </p>
                 </div>
             </div>
             <div class="col col-md-3">
                 <div class="committee-image">
                     <img
-                        src="@/assets/images/committee/2223/becca-coaching.jpg"
-                        alt="Hannah, President"
+                        :src="getExec('coaching').fields.image.fields.file.url"
+                        :alt="getExec('coaching').fields.image.fields.title"
                     />
                     <p class="text-center pt-2">
-                        <strong>Rebecca Playfor</strong>
+                        <strong>{{ getExec('coaching').fields.name }}</strong>
                         <br />
-                        Coaching & Development
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div
-            class="row row-cols-1 row-cols-sm-2 row-cols-md-4 align-items-center justify-content-center"
-        >
-            <div class="col col-md-3">
-                <div class="committee-image">
-                    <img
-                        src="@/assets/images/committee/2223/josh-teamcaptain.jpg"
-                        alt="Hannah, President"
-                    />
-                    <p class="text-center pt-2">
-                        <strong>Josh Davies</strong>
-                        <br />
-                        Team Captain
-                    </p>
-                </div>
-            </div>
-            <div class="col col-md-3">
-                <div class="committee-image">
-                    <img
-                        src="@/assets/images/committee/2223/charlotte-teamcaptain.jpg"
-                        alt="Hannah, President"
-                    />
-                    <p class="text-center pt-2">
-                        <strong>Charlotte Miller</strong>
-                        <br />
-                        Team Captain
-                    </p>
-                </div>
-            </div>
-            <div class="col col-md-3">
-                <div class="committee-image">
-                    <img
-                        src="@/assets/images/committee/2223/tamyla-performance.jpg"
-                        alt="Hannah, President"
-                    />
-                    <p class="text-center pt-2">
-                        <strong>Tamyla Jawahir</strong>
-                        <br />
-                        Performance Coordinator
-                    </p>
-                </div>
-            </div>
-            <div class="col col-md-3">
-                <div class="committee-image">
-                    <img
-                        src="@/assets/images/committee/2223/eloisa-varsity.jpg"
-                        alt="Hannah, President"
-                    />
-                    <p class="text-center pt-2">
-                        <strong>Eloisa Tait</strong>
-                        <br />
-                        Varsity President
+                        {{ getExec('coaching').fields.position }}
                     </p>
                 </div>
             </div>
@@ -137,55 +81,148 @@
             <div class="col col-md-3">
                 <div class="committee-image">
                     <img
-                        src="@/assets/images/committee/2223/ellie-events.jpg"
-                        alt="Hannah, President"
+                        :src="getExec('teamCaptain1').fields.image.fields.file.url"
+                        :alt="getExec('teamCaptain1').fields.image.fields.title"
                     />
                     <p class="text-center pt-2">
-                        <strong>Ellie Randall</strong>
+                        <strong>{{ getExec('teamCaptain1').fields.name }}</strong>
                         <br />
-                        Events Officer
+                        {{ getExec('teamCaptain1').fields.position }}
                     </p>
                 </div>
             </div>
             <div class="col col-md-3">
                 <div class="committee-image">
                     <img
-                        src="@/assets/images/committee/2223/serena-socials.jpg"
-                        alt="Hannah, President"
+                        :src="getExec('teamCaptain2').fields.image.fields.file.url"
+                        :alt="getExec('teamCaptain2').fields.image.fields.title"
                     />
                     <p class="text-center pt-2">
-                        <strong>Serena Lola</strong>
+                        <strong>{{ getExec('teamCaptain2').fields.name }}</strong>
                         <br />
-                        Social Secretary
+                        {{ getExec('teamCaptain2').fields.position }}
                     </p>
                 </div>
             </div>
             <div class="col col-md-3">
                 <div class="committee-image">
                     <img
-                        src="@/assets/images/committee/2223/benny-socials.jpg"
-                        alt="Hannah, President"
+                        :src="getExec('performance').fields.image.fields.file.url"
+                        :alt="getExec('performance').fields.image.fields.title"
                     />
                     <p class="text-center pt-2">
-                        <strong>Benedek Der</strong>
+                        <strong>{{ getExec('performance').fields.name }}</strong>
                         <br />
-                        Social Secretary
+                        {{ getExec('performance').fields.position }}
                     </p>
                 </div>
             </div>
             <div class="col col-md-3">
                 <div class="committee-image">
                     <img
-                        src="@/assets/images/committee/2223/hayley-publicity.jpg"
-                        alt="Hannah, President"
+                        :src="getExec('varsity').fields.image.fields.file.url"
+                        :alt="getExec('varsity').fields.image.fields.title"
                     />
                     <p class="text-center pt-2">
-                        <strong>Hayley So</strong>
+                        <strong>{{ getExec('varsity').fields.name }}</strong>
                         <br />
-                        Sponsorships & Publicity
+                        {{ getExec('varsity').fields.position }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div
+            class="row row-cols-1 row-cols-sm-2 row-cols-md-4 align-items-center justify-content-center"
+        >
+            <div class="col col-md-3">
+                <div class="committee-image">
+                    <img
+                        :src="getExec('events').fields.image.fields.file.url"
+                        :alt="getExec('events').fields.image.fields.title"
+                    />
+                    <p class="text-center pt-2">
+                        <strong>{{ getExec('events').fields.name }}</strong>
+                        <br />
+                        {{ getExec('events').fields.position }}
+                    </p>
+                </div>
+            </div>
+            <div class="col col-md-3">
+                <div class="committee-image">
+                    <img
+                        :src="getExec('socialSecretary1').fields.image.fields.file.url"
+                        :alt="getExec('socialSecretary1').fields.image.fields.title"
+                    />
+                    <p class="text-center pt-2">
+                        <strong>{{ getExec('socialSecretary1').fields.name }}</strong>
+                        <br />
+                        {{ getExec('socialSecretary1').fields.position }}
+                    </p>
+                </div>
+            </div>
+            <div class="col col-md-3">
+                <div class="committee-image">
+                    <img
+                        :src="getExec('socialSecretary2').fields.image.fields.file.url"
+                        :alt="getExec('socialSecretary2').fields.image.fields.title"
+                    />
+                    <p class="text-center pt-2">
+                        <strong>{{ getExec('socialSecretary2').fields.name }}</strong>
+                        <br />
+                        {{ getExec('socialSecretary2').fields.position }}
+                    </p>
+                </div>
+            </div>
+            <div class="col col-md-3">
+                <div class="committee-image">
+                    <img
+                        :src="getExec('publicity').fields.image.fields.file.url"
+                        :alt="getExec('publicity').fields.image.fields.title"
+                    />
+                    <p class="text-center pt-2">
+                        <strong>{{ getExec('publicity').fields.name }}</strong>
+                        <br />
+                        {{ getExec('publicity').fields.position }}
                     </p>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
+<script lang="ts">
+import * as contentful from "contentful";
+import { defineComponent } from "vue";
+
+export default defineComponent({
+    name: "Committee",
+    data() {
+        return {
+            exec: [],
+        };
+    },
+    mounted() {
+        const client = contentful.createClient({
+            // @ts-ignore
+            space: import.meta.env.VITE_CONTENTFUL_SPACE_ID,
+            // @ts-ignore
+            environment: import.meta.env.VITE_CONTENTFUL_ENVIRONMENT_ID,
+            // @ts-ignore
+            accessToken: import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN,
+        });
+        client
+        .getEntries({
+                content_type: "exec",
+                include: 2,
+            })
+            // @ts-ignore
+            .then((response) => (this.exec = response.items))
+            .catch(console.error);
+    },
+    methods: {
+        getExec(id: string) {
+            return this.exec.find((entry) => entry.fields.positionId === id);
+        },
+    },
+});
+</script>
