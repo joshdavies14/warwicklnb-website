@@ -463,7 +463,7 @@ import * as contentful from "contentful";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-    name: "Varsity View",
+    name: "VarsityView",
     data() {
         return {
             images: [],

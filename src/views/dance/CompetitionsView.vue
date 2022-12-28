@@ -29,32 +29,16 @@
             data-bs-ride="carousel"
         >
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div
+                    v-for="(image, i) in images"
+                    :key="image.fields.title + '-i'"
+                    class="carousel-item"
+                    :class="i === 0 ? 'active' : ''"
+                >
                     <img
-                        src="@/assets/images/competitions/leicester22.jpg"
+                        :src="image.fields.file.url"
                         class="d-block w-100"
-                        alt="Leicester Friendly 2022"
-                    />
-                </div>
-                <div class="carousel-item">
-                    <img
-                        src="@/assets/images/competitions/warwick22-people.jpg"
-                        class="d-block w-100"
-                        alt="People at Warwick Varsity 2022"
-                    />
-                </div>
-                <div class="carousel-item">
-                    <img
-                        src="@/assets/images/competitions/manwinter22.jpg"
-                        class="d-block w-100"
-                        alt="Manchester Winter 2022"
-                    />
-                </div>
-                <div class="carousel-item">
-                    <img
-                        src="@/assets/images/competitions/warwick22-rnr.jpg"
-                        class="d-block w-100"
-                        alt="Rock and Roll finalists at Warwick Varsity 2022"
+                        :alt="image.fields.title"
                     />
                 </div>
             </div>
@@ -712,3 +696,34 @@
         </div>
     </div>
 </template>
+
+<script lang="ts">
+import * as contentful from "contentful";
+import { defineComponent } from "vue";
+
+export default defineComponent({
+    name: "CompetitionsView",
+    data() {
+        return {
+            images: [],
+        };
+    },
+    mounted() {
+        const client = contentful.createClient({
+            // @ts-ignore
+            space: import.meta.env.VITE_CONTENTFUL_SPACE_ID,
+            // @ts-ignore
+            environment: import.meta.env.VITE_CONTENTFUL_ENVIRONMENT_ID,
+            // @ts-ignore
+            accessToken: import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN,
+        });
+        client
+            .getAssets({
+                "metadata.tags.sys.id[in]": "images-competitions",
+            })
+            // @ts-ignore
+            .then((response) => (this.images = response.items))
+            .catch(console.error);
+    },
+});
+</script>

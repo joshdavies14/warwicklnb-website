@@ -1,7 +1,15 @@
 <template>
     <div class="head-block">
         <section
-            class="head-inner align-middle h-100 d-flex align-items-center justify-content-center py-4"
+            class="
+                head-inner
+                align-middle
+                h-100
+                d-flex
+                align-items-center
+                justify-content-center
+                py-4
+            "
         >
             <h1 class="display-5 fw-bold">socials</h1>
         </section>
@@ -22,39 +30,16 @@
             data-bs-ride="carousel"
         >
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div
+                    v-for="(image, i) in images"
+                    :key="image.fields.title + '-i'"
+                    class="carousel-item"
+                    :class="i === 0 ? 'active' : ''"
+                >
                     <img
-                        src="@/assets/images/socials/christmas-meal-2223.jpg"
+                        :src="image.fields.file.url"
                         class="d-block w-100"
-                        alt="Christmas Meal 22/23"
-                    />
-                </div>
-                <div class="carousel-item">
-                    <img
-                        src="@/assets/images/socials/circle-2122.jpg"
-                        class="d-block w-100"
-                        alt="Circle 21/22"
-                    />
-                </div>
-                <div class="carousel-item">
-                    <img
-                        src="@/assets/images/socials/skool-dayz-2122.jpg"
-                        class="d-block w-100"
-                        alt="Skool Dayz 21/22"
-                    />
-                </div>
-                <div class="carousel-item">
-                    <img
-                        src="@/assets/images/socials/christmas-meal-2122.jpg"
-                        class="d-block w-100"
-                        alt="Christmas Meal 21/22"
-                    />
-                </div>
-                <div class="carousel-item">
-                    <img
-                        src="@/assets/images/socials/adoptions-2122.jpg"
-                        class="d-block w-100"
-                        alt="Adoptions 21/22"
+                        :alt="image.fields.title"
                     />
                 </div>
             </div>
@@ -104,3 +89,34 @@
         </p>
     </div>
 </template>
+
+<script lang="ts">
+import * as contentful from "contentful";
+import { defineComponent } from "vue";
+
+export default defineComponent({
+    name: "SocialsView",
+    data() {
+        return {
+            images: [],
+        };
+    },
+    mounted() {
+        const client = contentful.createClient({
+            // @ts-ignore
+            space: import.meta.env.VITE_CONTENTFUL_SPACE_ID,
+            // @ts-ignore
+            environment: import.meta.env.VITE_CONTENTFUL_ENVIRONMENT_ID,
+            // @ts-ignore
+            accessToken: import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN,
+        });
+        client
+            .getAssets({
+                "metadata.tags.sys.id[in]": "images-socials",
+            })
+            // @ts-ignore
+            .then((response) => (this.images = response.items))
+            .catch(console.error);
+    },
+});
+</script>
