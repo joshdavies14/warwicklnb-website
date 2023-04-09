@@ -40,6 +40,7 @@ function getEventsList(maxResults = 1000) {
     return gapi.client.calendar.events.list({
         calendarId: calendarId,
         maxResults: maxResults,
+        singleEvents: true,
     });
 }
 
