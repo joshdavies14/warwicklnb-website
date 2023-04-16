@@ -120,13 +120,13 @@
             <div class="col col-md-3">
                 <div class="committee-image">
                     <img
-                        :src="getExec('varsity').fields.image.fields.file.url"
-                        :alt="getExec('varsity').fields.image.fields.title"
+                        :src="getExec('sponsorship').fields.image.fields.file.url"
+                        :alt="getExec('sponsorship').fields.image.fields.title"
                     />
                     <p class="text-center pt-2">
-                        <strong>{{ getExec('varsity').fields.name }}</strong>
+                        <strong>{{ getExec('sponsorship').fields.name }}</strong>
                         <br />
-                        {{ getExec('varsity').fields.position }}
+                        {{ getExec('sponsorship').fields.position }}
                     </p>
                 </div>
             </div>
@@ -137,13 +137,26 @@
             <div class="col col-md-3">
                 <div class="committee-image">
                     <img
-                        :src="getExec('events').fields.image.fields.file.url"
-                        :alt="getExec('events').fields.image.fields.title"
+                        :src="getExec('events1').fields.image.fields.file.url"
+                        :alt="getExec('events1').fields.image.fields.title"
                     />
                     <p class="text-center pt-2">
-                        <strong>{{ getExec('events').fields.name }}</strong>
+                        <strong>{{ getExec('events1').fields.name }}</strong>
                         <br />
-                        {{ getExec('events').fields.position }}
+                        {{ getExec('events1').fields.position }}
+                    </p>
+                </div>
+            </div>
+            <div class="col col-md-3">
+                <div class="committee-image">
+                    <img
+                        :src="getExec('events2').fields.image.fields.file.url"
+                        :alt="getExec('events2').fields.image.fields.title"
+                    />
+                    <p class="text-center pt-2">
+                        <strong>{{ getExec('events2').fields.name }}</strong>
+                        <br />
+                        {{ getExec('events2').fields.position }}
                     </p>
                 </div>
             </div>
@@ -170,19 +183,6 @@
                         <strong>{{ getExec('socialSecretary2').fields.name }}</strong>
                         <br />
                         {{ getExec('socialSecretary2').fields.position }}
-                    </p>
-                </div>
-            </div>
-            <div class="col col-md-3">
-                <div class="committee-image">
-                    <img
-                        :src="getExec('publicity').fields.image.fields.file.url"
-                        :alt="getExec('publicity').fields.image.fields.title"
-                    />
-                    <p class="text-center pt-2">
-                        <strong>{{ getExec('publicity').fields.name }}</strong>
-                        <br />
-                        {{ getExec('publicity').fields.position }}
                     </p>
                 </div>
             </div>
