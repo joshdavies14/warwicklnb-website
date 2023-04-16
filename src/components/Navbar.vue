@@ -16,15 +16,15 @@
                         >
                     </li>
                     <li class="nav-item align-middle dropdown">
-                        <RouterLink
-                            to="/whats-on"
+                        <a
+                            href="#"
                             class="nav-link dropdown-toggle align-middle px-3"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                             data-bs-reference="parent"
                         >
                             What's On
-                        </RouterLink>
+                        </a>
 
                         <ul class="dropdown-menu">
                             <li>
@@ -56,15 +56,15 @@
                         </ul>
                     </li>
                     <li class="nav-item align-middle dropdown">
-                        <RouterLink
-                            to="/get-involved"
+                        <a
+                            href="/#"
                             class="nav-link dropdown-toggle align-middle px-3"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                             data-bs-reference="parent"
                         >
                             Let's Dance
-                        </RouterLink>
+                        </a>
 
                         <ul class="dropdown-menu">
                             <li>
