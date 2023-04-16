@@ -1,5 +1,7 @@
 <template>
-    <h2 class="d-flex align-items-center justify-content-center pb-3 pt-5">fundraising</h2>
+    <h2 class="d-flex align-items-center justify-content-center pb-3 pt-5">
+        fundraising
+    </h2>
 
     <div class="container h-100 px-5">
         <p class="d-flex align-items-center justify-content-center text-center">

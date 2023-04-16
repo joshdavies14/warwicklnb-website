@@ -38,7 +38,7 @@
                         :src="image.fields.file.url"
                         class="d-block w-100"
                         :alt="image.fields.title"
-                    />
+                    >
                 </div>
             </div>
             <button
@@ -69,9 +69,7 @@
 
         <div class="row">
             <div class="col">
-                <p
-                    class="text-center"
-                >
+                <p class="text-center">
                     In 2021, Warwick does Strictly Come Dancing was a
                     live-streamed event with couples performing either within
                     their household or socially-distanced. Warwick Latin &
@@ -80,18 +78,14 @@
                     learn more about YoungMindsUK by visiting their website
                     <a href="https://www.youngminds.org.uk">here</a>.
                 </p>
-                <p
-                    class="text-center"
-                >
+                <p class="text-center">
                     Warwick Strictly 2022 was on Friday 4th February 2022 and
                     once again it was a fabulous evening of glitz, glam and many
                     sparkles. It was an amazing night for fundraising, with a
                     massive £4748.79 for Coventry Foodbank, a charity helping
                     those in crisis.
                 </p>
-                <p
-                    class="text-center"
-                >
+                <p class="text-center">
                     In 2023, Warwick Does Strictly was held raising money for
                     icandance, a community who celebrate children and young
                     people with disabilities, empowering them through dance and
@@ -106,7 +100,9 @@
                     you covered - checkout the live stream below along with the
                     playlist of the individual dances.
                 </p>
-                <div class="d-flex align-items-center justify-content-center py-2">
+                <div
+                    class="d-flex align-items-center justify-content-center py-2"
+                >
                     <iframe
                         width="800"
                         height="450"
@@ -116,7 +112,9 @@
                         allowfullscreen
                     ></iframe>
                 </div>
-                <div class="d-flex align-items-center justify-content-center py-2">
+                <div
+                    class="d-flex align-items-center justify-content-center py-2"
+                >
                     <iframe
                         width="800"
                         height="450"
@@ -132,11 +130,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import * as contentful from "contentful";
+import { defineComponent } from 'vue';
+import * as contentful from 'contentful';
 
 export default defineComponent({
-    name: "StrictlyView",
+    name: 'StrictlyView',
     data() {
         return {
             images: [],
@@ -153,7 +151,7 @@ export default defineComponent({
         });
         client
             .getAssets({
-                "metadata.tags.sys.id[in]": "images-strictly",
+                'metadata.tags.sys.id[in]': 'images-strictly',
             })
             // @ts-ignore
             .then((response) => (this.images = response.items))

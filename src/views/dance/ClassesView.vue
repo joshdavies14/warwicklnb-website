@@ -1,15 +1,7 @@
 <template>
     <div class="head-block">
         <section
-            class="
-                head-inner
-                align-middle
-                h-100
-                d-flex
-                align-items-center
-                justify-content-center
-                py-4
-            "
+            class="head-inner align-middle h-100 d-flex align-items-center justify-content-center py-4"
         >
             <h1 class="display-5 fw-bold">classes</h1>
         </section>
@@ -221,8 +213,8 @@
                 <div class="card-body">
                     <h5 class="card-title">beginner</h5>
                     <p class="card-text">
-                        <strong>£2.50</strong> - member <br />
-                        <strong>£3.50</strong> - non-member <br />
+                        <strong>£2.50</strong> - member <br >
+                        <strong>£3.50</strong> - non-member <br >
                         <strong>£15</strong> - class pass
                     </p>
                 </div>
@@ -231,8 +223,8 @@
                 <div class="card-body">
                     <h5 class="card-title">novice</h5>
                     <p class="card-text">
-                        <strong>£3</strong> - member <br />
-                        <strong>£4</strong> - non-member <br />
+                        <strong>£3</strong> - member <br >
+                        <strong>£4</strong> - non-member <br >
                         <strong>£18</strong> - class pass
                     </p>
                 </div>
@@ -241,8 +233,8 @@
                 <div class="card-body">
                     <h5 class="card-title">inter/adv</h5>
                     <p class="card-text">
-                        <strong>£4</strong> - member <br />
-                        <strong>£5</strong> - non-member <br />
+                        <strong>£4</strong> - member <br >
+                        <strong>£5</strong> - non-member <br >
                         <strong>£24</strong> - class pass
                     </p>
                 </div>

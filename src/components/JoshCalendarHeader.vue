@@ -9,7 +9,10 @@
             >
                 <font-awesome-icon
                     icon="fa-solid fa-chevron-left"
-                /><font-awesome-icon icon="fa-solid fa-chevron-left" />
+                ></font-awesome-icon
+                ><font-awesome-icon
+                    icon="fa-solid fa-chevron-left"
+                ></font-awesome-icon>
             </button>
             <button
                 :disabled="!headerProps.previousPeriod"
@@ -17,7 +20,9 @@
                 aria-label="Previous Period"
                 @click.prevent="onInput(headerProps.previousPeriod)"
             >
-                <font-awesome-icon icon="fa-solid fa-chevron-left" />
+                <font-awesome-icon
+                    icon="fa-solid fa-chevron-left"
+                ></font-awesome-icon>
             </button>
             <button
                 class="currentPeriod"
@@ -32,7 +37,9 @@
                 aria-label="Next Period"
                 @click.prevent="onInput(headerProps.nextPeriod)"
             >
-                <font-awesome-icon icon="fa-solid fa-chevron-right" />
+                <font-awesome-icon
+                    icon="fa-solid fa-chevron-right"
+                ></font-awesome-icon>
             </button>
             <button
                 :disabled="!headerProps.nextYear"
@@ -42,7 +49,10 @@
             >
                 <font-awesome-icon
                     icon="fa-solid fa-chevron-right"
-                /><font-awesome-icon icon="fa-solid fa-chevron-right" />
+                ></font-awesome-icon
+                ><font-awesome-icon
+                    icon="fa-solid fa-chevron-right"
+                ></font-awesome-icon>
             </button>
         </div>
         <div class="periodLabel">
@@ -52,11 +62,11 @@
 </template>
 
 <script lang="ts">
-import type { IHeaderProps } from "../utils/iHeaderProps";
-import { defineComponent } from "vue";
+import type { IHeaderProps } from '../utils/iHeaderProps';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-    name: "JoshCalendarHeader",
+    name: 'JoshCalendarHeader',
     props: {
         headerProps: {
             type: Object as () => IHeaderProps,
@@ -71,7 +81,7 @@ export default defineComponent({
     },
     methods: {
         onInput(d: Date | null): void {
-            this.$emit("input", d);
+            this.$emit('input', d);
         },
     },
 });
@@ -79,6 +89,6 @@ export default defineComponent({
 
 <script setup lang="ts">
 const emit = defineEmits<{
-    (e: "input", day: Date | null): void;
+    (e: 'input', day: Date | null): void;
 }>();
 </script>

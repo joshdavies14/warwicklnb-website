@@ -1,15 +1,7 @@
 <template>
     <div class="head-block">
         <section
-            class="
-                head-inner
-                align-middle
-                h-100
-                d-flex
-                align-items-center
-                justify-content-center
-                py-4
-            "
+            class="head-inner align-middle h-100 d-flex align-items-center justify-content-center py-4"
         >
             <h1 class="display-5 fw-bold">competitions</h1>
         </section>
@@ -39,7 +31,7 @@
                         :src="image.fields.file.url"
                         class="d-block w-100"
                         :alt="image.fields.title"
-                    />
+                    >
                 </div>
             </div>
             <button
@@ -602,8 +594,8 @@
                     <div class="card-body">
                         <h5 class="card-title">leicester friendly</h5>
                         <p class="card-text">
-                            ~£30 <br />
-                            travel: 45 minutes <br />
+                            ~£30 <br >
+                            travel: 45 minutes <br >
                             term 1
                         </p>
                     </div>
@@ -614,8 +606,8 @@
                     <div class="card-body">
                         <h5 class="card-title">warwick varsity</h5>
                         <p class="card-text">
-                            ~£18 <br />
-                            travel: n/a <br />
+                            ~£18 <br >
+                            travel: n/a <br >
                             term 1
                         </p>
                     </div>
@@ -626,8 +618,8 @@
                     <div class="card-body">
                         <h5 class="card-title">manchester winter</h5>
                         <p class="card-text">
-                            ~£30 <br />
-                            travel: 2.5 hours <br />
+                            ~£30 <br >
+                            travel: 2.5 hours <br >
                             term 1
                         </p>
                     </div>
@@ -638,8 +630,8 @@
                     <div class="card-body">
                         <h5 class="card-title">birmingham friendly</h5>
                         <p class="card-text">
-                            ~£20 <br />
-                            travel: 1 hour <br />
+                            ~£20 <br >
+                            travel: 1 hour <br >
                             term 2
                         </p>
                     </div>
@@ -650,8 +642,8 @@
                     <div class="card-body">
                         <h5 class="card-title">northerns - sheffield</h5>
                         <p class="card-text">
-                            ~£35 <br />
-                            travel: 3 hours <br />
+                            ~£35 <br >
+                            travel: 3 hours <br >
                             term 2
                         </p>
                     </div>
@@ -662,8 +654,8 @@
                     <div class="card-body">
                         <h5 class="card-title">nationals - blackpool</h5>
                         <p class="card-text">
-                            ~£85 <br />
-                            travel: 4 hours <br />
+                            ~£85 <br >
+                            travel: 4 hours <br >
                             term 2
                         </p>
                     </div>
@@ -674,8 +666,8 @@
                     <div class="card-body">
                         <h5 class="card-title">bristol friendly</h5>
                         <p class="card-text">
-                            ~£30 <br />
-                            travel: 2.5 hours <br />
+                            ~£30 <br >
+                            travel: 2.5 hours <br >
                             term 2
                         </p>
                     </div>
@@ -686,8 +678,8 @@
                     <div class="card-body">
                         <h5 class="card-title">manchester spring</h5>
                         <p class="card-text">
-                            ~£30 <br />
-                            travel: 2.5 hours <br />
+                            ~£30 <br >
+                            travel: 2.5 hours <br >
                             term 3
                         </p>
                     </div>
@@ -698,11 +690,11 @@
 </template>
 
 <script lang="ts">
-import * as contentful from "contentful";
-import { defineComponent } from "vue";
+import * as contentful from 'contentful';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-    name: "CompetitionsView",
+    name: 'CompetitionsView',
     data() {
         return {
             images: [],
@@ -719,7 +711,7 @@ export default defineComponent({
         });
         client
             .getAssets({
-                "metadata.tags.sys.id[in]": "images-competitions",
+                'metadata.tags.sys.id[in]': 'images-competitions',
             })
             // @ts-ignore
             .then((response) => (this.images = response.items))

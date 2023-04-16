@@ -46,9 +46,9 @@
                             <p class="card-text">
                                 We offer dance classes for all abilities
                             </p>
-                            <a href="/classes" class="btn btn-primary"
-                                >learn more</a
-                            >
+                            <a href="/classes" class="btn btn-primary">
+                                learn more
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -59,9 +59,9 @@
                             <p class="card-text">
                                 Give it a go! Put those lessons into action
                             </p>
-                            <a href="/competitions" class="btn btn-primary"
-                                >learn more</a
-                            >
+                            <a href="/competitions" class="btn btn-primary">
+                                learn more
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -73,9 +73,9 @@
                                 Make new friends, get to know everyone, and have
                                 some fun!
                             </p>
-                            <a href="/socials" class="btn btn-primary"
-                                >learn more</a
-                            >
+                            <a href="/socials" class="btn btn-primary">
+                                learn more
+                            </a>
                         </div>
                     </div>
                 </div>

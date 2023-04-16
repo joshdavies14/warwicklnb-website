@@ -19,4 +19,4 @@ export interface INormalizedCalendarItem extends ICalendarItem {
     itemRow?: number;
 }
 
-export type DateTimeFormatOption = "long" | "short" | "narrow" | undefined;
+export type DateTimeFormatOption = 'long' | 'short' | 'narrow' | undefined;

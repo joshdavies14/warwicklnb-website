@@ -1,15 +1,7 @@
 <template>
     <div class="head-block">
         <section
-            class="
-                head-inner
-                align-middle
-                h-100
-                d-flex
-                align-items-center
-                justify-content-center
-                py-4
-            "
+            class="head-inner align-middle h-100 d-flex align-items-center justify-content-center py-4"
         >
             <h1 class="display-5 fw-bold">socials</h1>
         </section>
@@ -40,7 +32,7 @@
                         :src="image.fields.file.url"
                         class="d-block w-100"
                         :alt="image.fields.title"
-                    />
+                    >
                 </div>
             </div>
             <button
@@ -91,11 +83,11 @@
 </template>
 
 <script lang="ts">
-import * as contentful from "contentful";
-import { defineComponent } from "vue";
+import * as contentful from 'contentful';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-    name: "SocialsView",
+    name: 'SocialsView',
     data() {
         return {
             images: [],
@@ -112,7 +104,7 @@ export default defineComponent({
         });
         client
             .getAssets({
-                "metadata.tags.sys.id[in]": "images-socials",
+                'metadata.tags.sys.id[in]': 'images-socials',
             })
             // @ts-ignore
             .then((response) => (this.images = response.items))

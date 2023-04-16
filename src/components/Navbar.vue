@@ -12,7 +12,7 @@
                 >
                     <li class="nav-item align-middle">
                         <RouterLink to="/" class="nav-link align-middle px-3"
-                            >Home</RouterLink
+                        >Home</RouterLink
                         >
                     </li>
                     <li class="nav-item align-middle dropdown">
@@ -86,14 +86,14 @@
                         <RouterLink
                             to="/about"
                             class="nav-link align-middle px-3"
-                            >About</RouterLink
+                        >About</RouterLink
                         >
                     </li>
                     <li class="nav-item align-middle">
                         <RouterLink
                             to="/blog"
                             class="nav-link align-middle px-3"
-                            >Blog</RouterLink
+                        >Blog</RouterLink
                         >
                     </li>
                 </ul>

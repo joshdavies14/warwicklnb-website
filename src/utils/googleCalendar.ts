@@ -4,23 +4,23 @@
 function loadCalendarAPI() {
     const apiKey = import.meta.env.VITE_CALENDAR_API_KEY;
     return new Promise((resolve, reject) => {
-        const script = document.createElement("script");
-        script.src = "https://apis.google.com/js/api.js";
+        const script = document.createElement('script');
+        script.src = 'https://apis.google.com/js/api.js';
         document.body.appendChild(script);
         script.onload = () => {
             // @ts-ignore: Cannot find name 'gapi'.
-            gapi.load("client", () => {
+            gapi.load('client', () => {
                 // @ts-ignore: Cannot find name 'gapi'.
                 gapi.client.init({ apiKey: apiKey }).then(() => {
                     // @ts-ignore: Cannot find name 'gapi'.
                     gapi.client
                         .load(
-                            "https://content.googleapis.com/discovery/v1/apis/calendar/v3/rest"
+                            'https://content.googleapis.com/discovery/v1/apis/calendar/v3/rest'
                         )
                         .then(
                             () =>
                                 resolve(
-                                    "GAPI client successfully loaded for API"
+                                    'GAPI client successfully loaded for API'
                                 ),
                             (err: any) => reject(err)
                         );
@@ -67,7 +67,7 @@ export async function getEventsForCalendar() {
     try {
         events = await getEventsList();
         events.result.items.forEach((event: any) => {
-            if (event.status !== "cancelled") {
+            if (event.status !== 'cancelled') {
                 const calendarEvent: CalendarEvent = {
                     id: event.id,
                     startDate: new Date(event.start.dateTime),
@@ -75,10 +75,10 @@ export async function getEventsForCalendar() {
                     title: event.summary,
                     tooltip:
                         event.summary +
-                        (event.description ? " - " + event.description : ""),
+                        (event.description ? ' - ' + event.description : ''),
                     url: event.htmlLink,
                     classes: [],
-                    style: "",
+                    style: '',
                 };
                 calendarEvents.push(calendarEvent);
             }

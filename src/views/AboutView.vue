@@ -35,12 +35,12 @@
         </p>
     </div>
 
-    <Fundraising />
+    <Fundraising></Fundraising>
 
-    <Committee />
+    <Committee></Committee>
 </template>
 
 <script setup lang="ts">
-import Fundraising from "./about/Fundraising.vue";
-import Committee from "./about/Committee.vue";
+import Fundraising from './about/Fundraising.vue';
+import Committee from './about/Committee.vue';
 </script>

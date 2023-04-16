@@ -1,15 +1,7 @@
 <template>
     <div class="head-block">
         <section
-            class="
-                head-inner
-                align-middle
-                h-100
-                d-flex
-                align-items-center
-                justify-content-center
-                py-4
-            "
+            class="head-inner align-middle h-100 d-flex align-items-center justify-content-center py-4"
         >
             <h1 class="display-5 fw-bold">warwick varsity</h1>
         </section>
@@ -46,7 +38,7 @@
                         :src="image.fields.file.url"
                         class="d-block w-100"
                         :alt="image.fields.title"
-                    />
+                    >
                 </div>
             </div>
             <button
@@ -78,12 +70,7 @@
         <div class="row row-cols-1 row-cols-lg-2">
             <div class="col">
                 <p
-                    class="
-                        d-flex
-                        align-items-center
-                        justify-content-center
-                        text-center
-                    "
+                    class="d-flex align-items-center justify-content-center text-center"
                 >
                     Whether you're a total beginner or aspiring champion,
                     Warwick Varsity gives the opportunity for dancers of all
@@ -91,12 +78,7 @@
                     and friendly environment.
                 </p>
                 <p
-                    class="
-                        d-flex
-                        align-items-center
-                        justify-content-center
-                        text-center
-                    "
+                    class="d-flex align-items-center justify-content-center text-center"
                 >
                     Throughout the day, the dances are split into rounds based
                     on skill level, from heats, quarter-finals and semi-finals,
@@ -104,12 +86,7 @@
                     crowned champion.
                 </p>
                 <p
-                    class="
-                        d-flex
-                        align-items-center
-                        justify-content-center
-                        text-center
-                    "
+                    class="d-flex align-items-center justify-content-center text-center"
                 >
                     The highlight of the day for many dancers is the Team Match,
                     the ultimate display of university pride, which gives the
@@ -120,12 +97,7 @@
                     ensure that everyone is able to dance as much as possible.
                 </p>
                 <p
-                    class="
-                        d-flex
-                        align-items-center
-                        justify-content-center
-                        text-center
-                    "
+                    class="d-flex align-items-center justify-content-center text-center"
                 >
                     Want to relive some of the best moments of Varsity 2022?
                     We've got you covered - check out our highlights reel below!
@@ -144,12 +116,7 @@
             </div>
             <div class="col">
                 <p
-                    class="
-                        d-flex
-                        align-items-center
-                        justify-content-center
-                        text-center
-                    "
+                    class="d-flex align-items-center justify-content-center text-center"
                 >
                     Each year, we host a charity fun dance to raise money for a
                     local charity. In 2022, we ran a Straight-Legged Samba and a
@@ -252,8 +219,6 @@
                                         height="50px"
                                         viewBox="0 0 60 60"
                                         version="1.1"
-                                        xmlns="https://www.w3.org/2000/svg"
-                                        xmlns:xlink="https://www.w3.org/1999/xlink"
                                     >
                                         <g
                                             stroke="none"
@@ -446,9 +411,9 @@
                                         text-decoration: none;
                                     "
                                     target="_blank"
-                                    >A post shared by icandance
-                                    (@icandanceuk)</a
                                 >
+                                    A post shared by icandance (@icandanceuk)
+                                </a>
                             </p>
                         </div>
                     </blockquote>
@@ -459,11 +424,11 @@
 </template>
 
 <script lang="ts">
-import * as contentful from "contentful";
-import { defineComponent } from "vue";
+import * as contentful from 'contentful';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-    name: "VarsityView",
+    name: 'VarsityView',
     data() {
         return {
             images: [],
@@ -480,7 +445,7 @@ export default defineComponent({
         });
         client
             .getAssets({
-                "metadata.tags.sys.id[in]": "images-varsity",
+                'metadata.tags.sys.id[in]': 'images-varsity',
             })
             // @ts-ignore
             .then((response) => (this.images = response.items))

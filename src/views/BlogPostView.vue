@@ -6,15 +6,7 @@
     </div>
     <div v-else class="head-block">
         <section
-            class="
-                head-inner
-                h-100
-                d-flex
-                flex-column
-                align-items-center
-                justify-content-center
-                py-4
-            "
+            class="head-inner h-100 d-flex flex-column align-items-center justify-content-center py-4"
         >
             <h1 class="display-5 fw-bold d-block">
                 {{ post.fields.title }}
@@ -31,17 +23,17 @@
 </template>
 
 <script lang="ts">
-import * as contentful from "contentful";
-import { DateTime } from "luxon";
-import { documentToHtmlString } from "../utils/contentfulUtils";
-import { defineComponent } from "vue";
+import * as contentful from 'contentful';
+import { DateTime } from 'luxon';
+import { documentToHtmlString } from '../utils/contentfulUtils';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-    name: "BlogPostView",
+    name: 'BlogPostView',
     data() {
         return {
             post: null,
-            postContent: "",
+            postContent: '',
             isLoading: true,
         };
     },
@@ -50,7 +42,7 @@ export default defineComponent({
             if (this.post !== null) {
                 this.postContent = documentToHtmlString({
                     // @ts-ignore
-                    nodeType: "document",
+                    nodeType: 'document',
                     content: JSON.parse(
                         // @ts-ignore
                         JSON.stringify(this.post.fields.content.content)
@@ -71,10 +63,10 @@ export default defineComponent({
         });
         client
             .getEntries({
-                content_type: "blog",
+                content_type: 'blog',
                 include: 5,
                 limit: 1,
-                "fields.slug": this.$route.params.slug,
+                'fields.slug': this.$route.params.slug,
             })
             // @ts-ignore
             .then((response) => (this.post = response.items[0]))
