@@ -68,21 +68,16 @@
 
                         <ul class="dropdown-menu">
                             <li>
-                                <RouterLink
-                                    to="/classes"
-                                    class="dropdown-item"
-                                >
+                                <RouterLink to="/classes" class="dropdown-item">
                                     Classes
                                 </RouterLink>
                             </li>
                             <li>
-                                <RouterLink to="/competitions" class="dropdown-item">
+                                <RouterLink
+                                    to="/competitions"
+                                    class="dropdown-item"
+                                >
                                     Competitions
-                                </RouterLink>
-                            </li>
-                            <li>
-                                <RouterLink to="/private-lessons" class="dropdown-item">
-                                    Private Lessons
                                 </RouterLink>
                             </li>
                         </ul>
@@ -99,13 +94,6 @@
                             to="/blog"
                             class="nav-link align-middle px-3"
                             >Blog</RouterLink
-                        >
-                    </li>
-                    <li class="nav-item align-middle">
-                        <RouterLink
-                            to="/contact"
-                            class="nav-link align-middle px-3"
-                            >Contact Us</RouterLink
                         >
                     </li>
                 </ul>
