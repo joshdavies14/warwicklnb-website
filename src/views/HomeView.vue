@@ -59,20 +59,7 @@
                                 We offer dance classes for all abilities
                             </p>
                             <a href="/classes" class="btn btn-primary"
-                                >Go somewhere</a
-                            >
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">private lessons</h5>
-                            <p class="card-text">
-                                Want to take your dancing to another level?
-                            </p>
-                            <a href="/private-lessons" class="btn btn-primary"
-                                >Go somewhere</a
+                                >learn more</a
                             >
                         </div>
                     </div>
@@ -85,7 +72,7 @@
                                 Give it a go! Put those lessons into action
                             </p>
                             <a href="/competitions" class="btn btn-primary"
-                                >Go somewhere</a
+                                >learn more</a
                             >
                         </div>
                     </div>
@@ -99,21 +86,7 @@
                                 some fun!
                             </p>
                             <a href="/socials" class="btn btn-primary"
-                                >Go somewhere</a
-                            >
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">practice space</h5>
-                            <p class="card-text">
-                                We offer facilities that are available for more
-                                practice
-                            </p>
-                            <a href="/practice-spaces" class="btn btn-primary"
-                                >Go somewhere</a
+                                >learn more</a
                             >
                         </div>
                     </div>
