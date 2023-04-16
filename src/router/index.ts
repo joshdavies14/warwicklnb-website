@@ -50,6 +50,11 @@ const router = createRouter({
             component: () => import("../views/whatson/VarsityView.vue"),
         },
         {
+            path: "/strictly",
+            name: "strictly",
+            component: () => import("../views/whatson/StrictlyView.vue"),
+        },
+        {
             path: "/:pathMatch(.*)*",
             name: "not-found",
             component: () => import("../views/404View.vue"),
