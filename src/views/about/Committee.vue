@@ -3,7 +3,7 @@
         our committee
     </h2>
 
-    <div class="container h-100 px-5">
+    <div v-if="exec !== []" class="container h-100 px-5">
         <div
             class="row row-cols-1 row-cols-sm-2 row-cols-md-4 align-items-center justify-content-center"
         >
