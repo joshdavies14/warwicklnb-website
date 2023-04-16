@@ -22,7 +22,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "@popperjs/core": "^2.11.7",
     "@sentry/tracing": "^7.47.0",
-    "@sentry/vue": "^7.47.0",
+    "@sentry/vue": "^7.48.0",
     "@types/escape-html": "^1.0.2",
     "bootstrap": "^5.2.3",
     "contentful": "^9.3.5",
