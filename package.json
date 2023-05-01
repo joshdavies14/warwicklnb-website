@@ -21,7 +21,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "@popperjs/core": "^2.11.7",
-    "@sentry/tracing": "^7.48.0",
+    "@sentry/tracing": "^7.50.0",
     "@sentry/vue": "^7.48.0",
     "@types/escape-html": "^1.0.2",
     "bootstrap": "^5.2.3",
