@@ -3,7 +3,7 @@
         <div
             class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
         >
-            <p>&copy; 2022 Warwick Latin & Ballroom</p>
+            <p>&copy; {{ DateTime.now().year }} Warwick Latin & Ballroom</p>
             <ul class="list-unstyled d-flex">
                 <li class="ms-3">
                     <a href="https://www.facebook.com/warwicklnb">
@@ -39,3 +39,7 @@
         </div>
     </footer>
 </template>
+
+<script setup lang="ts">
+import { DateTime } from 'luxon';
+</script>
