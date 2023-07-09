@@ -54,6 +54,7 @@ export default defineComponent({
             .getEntries({
                 content_type: 'blog',
                 include: 2,
+                order: '-fields.date',
             })
             // @ts-ignore
             .then((response) => (this.posts = response.items))
