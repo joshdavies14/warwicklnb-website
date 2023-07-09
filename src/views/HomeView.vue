@@ -4,7 +4,7 @@
     <main>
         <div class="head-block-home">
             <section
-                class="head-inner align-middle h-100 d-flex align-items-center justify-content-center"
+                class="head-inner align-middle h-100 d-flex align-items-center justify-content-center text-center"
             >
                 <h1 class="display-2 fw-bold">warwick latin & ballroom</h1>
             </section>
