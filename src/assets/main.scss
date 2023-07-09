@@ -2,8 +2,9 @@
 @import './calendar.scss';
 
 .nav-container {
+    padding: 0;
     border-top: 6px solid $primary;
-    border-bottom: 2px solid $alt-grey;
+    border-bottom: 0px solid $alt-grey;
     box-shadow: 0px 1px 1px $alt-grey;
 }
 
