@@ -3,7 +3,7 @@
         our committee
     </h2>
 
-    <div v-if="exec !== []" class="container h-100 px-5">
+    <div v-if="exec.length > 0" class="container h-100 px-5">
         <div
             class="row row-cols-1 row-cols-sm-2 row-cols-md-4 align-items-center justify-content-center"
         >
@@ -20,10 +20,6 @@
                     </p>
                 </div>
             </div>
-        </div>
-        <div
-            class="row row-cols-1 row-cols-sm-2 row-cols-md-4 align-items-center justify-content-center"
-        >
             <div class="col col-md-3">
                 <div class="committee-image">
                     <img
@@ -32,11 +28,15 @@
                     >
                     <p class="text-center pt-2">
                         <strong>{{ getExec("vicepresident").fields.name }}</strong>
-                        <br >
+                        <br>
                         {{ getExec("vicepresident").fields.position }}
                     </p>
                 </div>
             </div>
+        </div>
+        <div
+            class="row row-cols-1 row-cols-sm-2 row-cols-md-4 align-items-center justify-content-center"
+        >
             <div class="col col-md-3">
                 <div class="committee-image">
                     <img
@@ -76,6 +76,19 @@
                     </p>
                 </div>
             </div>
+            <div class="col col-md-3">
+                <div class="committee-image">
+                    <img
+                        :src="getExec('performance').fields.image.fields.file.url"
+                        :alt="getExec('performance').fields.image.fields.title"
+                    >
+                    <p class="text-center pt-2">
+                        <strong>{{ getExec("performance").fields.name }}</strong>
+                        <br>
+                        {{ getExec("performance").fields.position }}
+                    </p>
+                </div>
+            </div>
         </div>
         <div
             class="row row-cols-1 row-cols-sm-2 row-cols-md-4 align-items-center justify-content-center"
@@ -109,36 +122,6 @@
             <div class="col col-md-3">
                 <div class="committee-image">
                     <img
-                        :src="getExec('performance').fields.image.fields.file.url"
-                        :alt="getExec('performance').fields.image.fields.title"
-                    >
-                    <p class="text-center pt-2">
-                        <strong>{{ getExec("performance").fields.name }}</strong>
-                        <br >
-                        {{ getExec("performance").fields.position }}
-                    </p>
-                </div>
-            </div>
-            <div class="col col-md-3">
-                <div class="committee-image">
-                    <img
-                        :src="getExec('sponsorship').fields.image.fields.file.url"
-                        :alt="getExec('sponsorship').fields.image.fields.title"
-                    >
-                    <p class="text-center pt-2">
-                        <strong>{{ getExec("sponsorship").fields.name }}</strong>
-                        <br >
-                        {{ getExec("sponsorship").fields.position }}
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div
-            class="row row-cols-1 row-cols-sm-2 row-cols-md-4 align-items-center justify-content-center"
-        >
-            <div class="col col-md-3">
-                <div class="committee-image">
-                    <img
                         :src="getExec('events1').fields.image.fields.file.url"
                         :alt="getExec('events1').fields.image.fields.title"
                     >
@@ -162,6 +145,10 @@
                     </p>
                 </div>
             </div>
+        </div>
+        <div
+            class="row row-cols-1 row-cols-sm-2 row-cols-md-4 align-items-center justify-content-center"
+        >
             <div class="col col-md-3">
                 <div class="committee-image">
                     <img
@@ -185,6 +172,32 @@
                         <strong>{{ getExec("socialSecretary2").fields.name }}</strong>
                         <br >
                         {{ getExec("socialSecretary2").fields.position }}
+                    </p>
+                </div>
+            </div>
+            <div class="col col-md-3">
+                <div class="committee-image">
+                    <img
+                        :src="getExec('sponsorship').fields.image.fields.file.url"
+                        :alt="getExec('sponsorship').fields.image.fields.title"
+                    >
+                    <p class="text-center pt-2">
+                        <strong>{{ getExec("sponsorship").fields.name }}</strong>
+                        <br >
+                        {{ getExec("sponsorship").fields.position }}
+                    </p>
+                </div>
+            </div>
+            <div class="col col-md-3">
+                <div class="committee-image">
+                    <img
+                        :src="getExec('publicity').fields.image.fields.file.url"
+                        :alt="getExec('publicity').fields.image.fields.title"
+                    >
+                    <p class="text-center pt-2">
+                        <strong>{{ getExec("publicity").fields.name }}</strong>
+                        <br >
+                        {{ getExec("publicity").fields.position }}
                     </p>
                 </div>
             </div>
